@@ -1,22 +1,76 @@
 body {
-    font-family: "Arial", sans-serif;
-}
-section {
+    font-family: "proxima-nova-soft", "Proxima Nova Soft", Helvetica, Arial,
+      sans-serif;
+    line-height: 1.618;
+    color: #3f3844;
+  }
+  section {
     text-align: center;
-}
-.game--container {
+    margin-top: 100px;
+  }
+  .game--container {
     display: grid;
     grid-template-columns: repeat(3, auto);
     width: 306px;
     margin: 50px auto;
-}
-.cell {
-    font-family: "Permanent Marker", cursive;
+  }
+  .cell {
+    font-family: "Courier New", monospace;
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 0 1px #333333;
-    border: 1px solid #333333;
     cursor: pointer;
-line-height: 100px;
+    line-height: 100px;
     font-size: 60px;
-}
+  }
+  
+  .square.top {
+    border-bottom-style: solid;
+  }
+  .square.bottom {
+    border-top-style: solid;
+  }
+  .square.right {
+    border-left-style: solid;
+  }
+  .square.left {
+    border-right-style: solid;
+  }
+  
+  .button {
+    border-radius: 4px;
+    background-color: #b5b5b5;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
